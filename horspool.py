@@ -1,9 +1,25 @@
+from itertools import product
+from string import ascii_lowercase
+
+letter = [''.join(i) for i in product(ascii_lowercase, repeat=1)]
+
 def horspool(text,pattern):
+    n = len(text)
+    m = len(pattern)
+    print('Texti : "{}" Paterni: "{}"'.format(text,pattern))
+    letterDict = {}
+    for i in letter:
+        x = {'{}'.format(i):m}
+        letterDict.update(x)
+    count = 0
+    for l in pattern:
+        x={'{}'.format(l):letterDict[l]- count}
+        letterDict.update(x)
+        count = count + 1
+    print('Tabela e inicializuar: {}'.format(letterDict))
     found = 0
     i = 0
-    m = len(pattern)
-    n = len(text)
-    print('Texti : "{}" Paterni: "{}"'.format(text,pattern))
+
 
     while i <= n - m:
         j = m - 1
