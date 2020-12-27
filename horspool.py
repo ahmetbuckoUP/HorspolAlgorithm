@@ -46,6 +46,7 @@ def horspool(text,pattern):
     print('Patterni u gjet {} here'.format(found))
 
 data = {
+    'asfsafasaahmetasdadasda':'aaa',
     'asfsafasaahmetasdadasd':'ahmet',
     'saahmetas':'ahmet',
     'asdasmetasahmetdasdahmet':'ahmet',
